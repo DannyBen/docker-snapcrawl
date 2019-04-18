@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  bash:
+    entrypoint: bash
+    build: .
+    <<: &default
+      image: dannyben/snapcrawl
+      volumes: [".:/app"]
+
+  snapcrawl:
+    <<: *default
