@@ -11,7 +11,7 @@ First, pull the docker image:
 
     $ docker pull dannyben/snapcrawl
 
-Check that it is working properly?:
+Check that it is working properly:
 
     $ docker run --rm -it dannyben/snapcrawl --help
 
