@@ -29,12 +29,27 @@ screenshots will be placed in your own computer.
 Using with Docker Compose
 --------------------------------------------------
 
-Alternatively, you can use the provided
-[docker-compose file](docker-compose.yml) as follows:
+```yaml
+# docker-compose.yml
+version: '3'
 
-    $ docker-compose build
-    $ docker-compose run snapcrawl --help
+services:
+  bash:
+    entrypoint: bash
+    <<: &default
+      image: dannyben/snapcrawl
+      volumes: [".:/app"]
 
+  snapcrawl:
+    <<: *default
+```
+
+And then you can run:
+
+```
+$ docker-compose run snapcrawl --help
+$ docker-compose run snapcrawl go example.com
+```
 
 
 
