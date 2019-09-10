@@ -6,7 +6,9 @@ services:
     build: .
     <<: &default
       image: dannyben/snapcrawl
-      volumes: [".:/app"]
+      # volumes: [".:/app"]
 
   snapcrawl:
     <<: *default
+
+  test:
