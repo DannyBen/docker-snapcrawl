@@ -5,5 +5,5 @@ before_install:
 
 script:
 - docker-compose -f.ci/docker-compose.yml run snapcrawl go example.com
-- test -f snaps/http-example-com.png
-- test -f snapcrawl.pstore
+- test -f test/snaps/http-example-com.png
+- test -f test/snapcrawl.pstore
