@@ -1,6 +1,8 @@
 Snapcrawl Docker Image
 ==================================================
 
+![Version](https://img.shields.io/badge/version-0.4.0-blue.svg)
+
 [View on GitHub][2] | [View on DockerHub][3]
 
 ---
@@ -23,7 +25,7 @@ Then you can run Snapcrawl while mounting your current directory so that
 screenshots will be placed in your own computer.
 
     $ docker run --rm -it --volume $PWD:/app \
-      dannyben/snapcrawl go example.com
+      dannyben/snapcrawl example.com
 
 
 Using with Docker Compose
@@ -48,7 +50,7 @@ And then you can run:
 
 ```
 $ docker-compose run snapcrawl --help
-$ docker-compose run snapcrawl go example.com
+$ docker-compose run snapcrawl example.com
 ```
 
 
