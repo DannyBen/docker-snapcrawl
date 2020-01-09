@@ -1,4 +1,4 @@
-FROM ruby:slim
+FROM ruby:2.6-slim
 
 WORKDIR /app
 
@@ -15,6 +15,6 @@ RUN apt-get update -y && apt-get install -y \
     build-essential patch ruby-dev zlib1g-dev liblzma-dev \
     libfontconfig imagemagick
 
-RUN gem install snapcrawl --version 0.4.0
+RUN gem install snapcrawl --version 0.4.1
 
 ENTRYPOINT ["snapcrawl"]

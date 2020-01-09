@@ -6,7 +6,12 @@ services:
     build: ../
     <<: &default
       image: dannyben/snapcrawl
-      volumes: ["../tmp:/app"]
+      volumes: [".:/app"]
 
   snapcrawl:
     <<: *default
+
+  mockserver:
+    image: dannyben/alpine-adsf
+    volumes: [".:/app"]
+    ports: ["3000:3000"]
