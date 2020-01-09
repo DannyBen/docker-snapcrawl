@@ -1,7 +1,7 @@
 Snapcrawl Docker Image
 ==================================================
 
-![Version](https://img.shields.io/badge/version-0.4.1-blue.svg)
+![Version](https://img.shields.io/badge/version-0.4.2-blue.svg)
 
 [View on GitHub][2] | [View on DockerHub][3]
 
