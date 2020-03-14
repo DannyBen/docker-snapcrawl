@@ -1,7 +1,7 @@
 Snapcrawl Docker Image
 ==================================================
 
-![Version](https://img.shields.io/badge/version-0.4.4-blue.svg)
+![Version](https://img.shields.io/badge/version-0.5.0-blue.svg)
 
 [View on GitHub][2] | [View on DockerHub][3]
 
@@ -13,19 +13,19 @@ for crawling a website and saving screenshots.
 Usage
 --------------------------------------------------
 
-First, pull the docker image:
+Create a `snapcrawl` alias that runs the docker container and mounts the 
+current directory to the container's working directory:
 
-    $ docker pull dannyben/snapcrawl
+```shell
+$ alias snapcrawl='docker run --rm -it --volume $PWD:/app dannyben/snapcrawl'
+```
 
-Check that it is working properly:
+Then you can run any snapcrawl command:
 
-    $ docker run --rm -it dannyben/snapcrawl --help
-
-Then you can run Snapcrawl while mounting your current directory so that 
-screenshots will be placed in your own computer.
-
-    $ docker run --rm -it --volume $PWD:/app \
-      dannyben/snapcrawl example.com
+```shell
+$ snapcrawl --help
+$ snapcrawl example.com log_level=0 depth=2 width=1024
+```
 
 
 Using with Docker Compose
