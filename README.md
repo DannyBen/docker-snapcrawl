@@ -17,7 +17,7 @@ Create a `snapcrawl` alias that runs the docker container and mounts the
 current directory to the container's working directory:
 
 ```shell
-$ alias snapcrawl='docker run --rm -it --volume $PWD:/app dannyben/snapcrawl'
+$ alias snapcrawl='docker run --rm -it --volume "$PWD:/app" dannyben/snapcrawl'
 ```
 
 Then you can run any snapcrawl command:
