@@ -15,6 +15,6 @@ RUN apt-get update -y && apt-get install -y \
     build-essential patch ruby-dev zlib1g-dev liblzma-dev \
     libfontconfig imagemagick
 
-RUN gem install snapcrawl --version 0.5.3
+RUN gem install snapcrawl --version 0.5.4
 
 ENTRYPOINT ["snapcrawl"]
